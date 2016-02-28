@@ -5,8 +5,8 @@ use_frameworks!
 plugin 'cocoapods-keys', {
   :project => 'shopify-ios',
   :keys => [
-    'shopify-api-key',
-    'shopify-channel-id'
+    'shopifyAPIKey',
+    'shopifyChannelId'
   ]}
 
 # My extension pods
