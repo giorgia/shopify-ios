@@ -15,6 +15,7 @@
 		C73B86911C82768800438972 /* shopify_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B86901C82768800438972 /* shopify_iosTests.swift */; };
 		C73B869C1C82768800438972 /* shopify_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B869B1C82768800438972 /* shopify_iosUITests.swift */; };
 		C7A9051E1C83674B00049AB3 /* Shopify.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9051D1C83674B00049AB3 /* Shopify.swift */; };
+		C7A905201C837EA900049AB3 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9051F1C837EA900049AB3 /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		C73B869B1C82768800438972 /* shopify_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopify_iosUITests.swift; sourceTree = "<group>"; };
 		C73B869D1C82768800438972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7A9051D1C83674B00049AB3 /* Shopify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shopify.swift; sourceTree = "<group>"; };
+		C7A9051F1C837EA900049AB3 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		FB30EC563E07C7D31687D926 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				C73B867D1C82768800438972 /* ProductsViewController.swift */,
+				C7A9051F1C837EA900049AB3 /* ProductCell.swift */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C73B867E1C82768800438972 /* ProductsViewController.swift in Sources */,
+				C7A905201C837EA900049AB3 /* ProductCell.swift in Sources */,
 				C73B867C1C82768800438972 /* AppDelegate.swift in Sources */,
 				C7A9051E1C83674B00049AB3 /* Shopify.swift in Sources */,
 			);
