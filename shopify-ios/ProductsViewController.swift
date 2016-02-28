@@ -8,6 +8,7 @@
 
 import Buy
 import UIKit
+import Haneke
 import SnapKit
 
 class ProductsViewController: UIViewController {
@@ -45,8 +46,8 @@ class ProductsViewController: UIViewController {
     }
     
     func setupFlowLayout(flowLayout: UICollectionViewFlowLayout) {
-        let dim = view.frame.size.width < 415 ? view.frame.size.width : (view.frame.size.width - 2) / 2
-        flowLayout.itemSize = CGSize(width: dim, height: dim)
+        let dim = view.frame.size.width < 415 ? view.frame.size.width - 1 : (view.frame.size.width - 2) / 2
+        flowLayout.estimatedItemSize = CGSize(width: dim, height: dim)
         flowLayout.scrollDirection = .Vertical
         flowLayout.sectionInset = UIEdgeInsetsZero
         flowLayout.minimumInteritemSpacing = 0
@@ -66,6 +67,7 @@ class ProductsViewController: UIViewController {
             self.reachedEnd = reachedEnd
             
             guard let buyProducts = products as? [BUYProduct] else { return }
+            
             self.products.appendContentsOf(buyProducts)
             self.collectionView?.reloadData()
         }
@@ -88,6 +90,9 @@ extension ProductsViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ProductCell.reuseCellIdentifier, forIndexPath: indexPath) as? ProductCell
         let product = products[indexPath.row]
+        if let image = product.images.first, imageURL = NSURL(string: image.src) {
+            cell?.imageView.hnk_setImageFromURL(imageURL)
+        }
         cell?.titleLabel.text = product.title
         return cell ?? UICollectionViewCell()
     }

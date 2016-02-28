@@ -20,3 +20,4 @@ pod 'Crashlytics', '~> 3.7.0'
 
 #UI
 pod 'SnapKit', '~> 0.15.0'
+pod 'HanekeSwift', '~> 0.10.1'
