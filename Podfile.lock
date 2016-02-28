@@ -4,12 +4,14 @@ PODS:
   - Fabric (1.6.6)
   - Keys (1.0.0)
   - Mobile-Buy-SDK (1.2.4)
+  - SnapKit (0.15.0)
 
 DEPENDENCIES:
   - Crashlytics (~> 3.7.0)
   - Fabric (~> 1.6.6)
   - Keys (from `Pods/CocoaPodsKeys`)
   - Mobile-Buy-SDK (~> 1.2.4)
+  - SnapKit (~> 0.15.0)
 
 EXTERNAL SOURCES:
   Keys:
@@ -20,5 +22,6 @@ SPEC CHECKSUMS:
   Fabric: 1abc1e59f11fa39ede6f690ef7309d8563e3ec59
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   Mobile-Buy-SDK: a999a38c934d056ad3a00e0225d47df8365d5480
+  SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
 
 COCOAPODS: 0.39.0

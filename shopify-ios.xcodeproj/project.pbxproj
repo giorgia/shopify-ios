@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		770B40876833E79FDB1E104E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB30EC563E07C7D31687D926 /* Pods.framework */; };
 		C73B867C1C82768800438972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B867B1C82768800438972 /* AppDelegate.swift */; };
-		C73B867E1C82768800438972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B867D1C82768800438972 /* ViewController.swift */; };
-		C73B86811C82768800438972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73B867F1C82768800438972 /* Main.storyboard */; };
+		C73B867E1C82768800438972 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B867D1C82768800438972 /* ProductsViewController.swift */; };
 		C73B86831C82768800438972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73B86821C82768800438972 /* Assets.xcassets */; };
 		C73B86861C82768800438972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73B86841C82768800438972 /* LaunchScreen.storyboard */; };
 		C73B86911C82768800438972 /* shopify_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B86901C82768800438972 /* shopify_iosTests.swift */; };
 		C73B869C1C82768800438972 /* shopify_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73B869B1C82768800438972 /* shopify_iosUITests.swift */; };
+		C7A9051E1C83674B00049AB3 /* Shopify.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9051D1C83674B00049AB3 /* Shopify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,7 @@
 		7721B5158F528F8E0B809FB2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C73B86781C82768800438972 /* shopify-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shopify-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73B867B1C82768800438972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C73B867D1C82768800438972 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C73B86801C82768800438972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C73B867D1C82768800438972 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		C73B86821C82768800438972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C73B86851C82768800438972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C73B86871C82768800438972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		C73B86971C82768800438972 /* shopify-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shopify-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73B869B1C82768800438972 /* shopify_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopify_iosUITests.swift; sourceTree = "<group>"; };
 		C73B869D1C82768800438972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7A9051D1C83674B00049AB3 /* Shopify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shopify.swift; sourceTree = "<group>"; };
 		FB30EC563E07C7D31687D926 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,8 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				C73B867B1C82768800438972 /* AppDelegate.swift */,
-				C73B867D1C82768800438972 /* ViewController.swift */,
-				C73B867F1C82768800438972 /* Main.storyboard */,
+				C7A9051D1C83674B00049AB3 /* Shopify.swift */,
+				C7A9051C1C835DED00049AB3 /* Cart */,
+				C7A9051B1C835DDB00049AB3 /* Products */,
 				C73B86821C82768800438972 /* Assets.xcassets */,
 				C73B86841C82768800438972 /* LaunchScreen.storyboard */,
 				C73B86871C82768800438972 /* Info.plist */,
@@ -147,6 +148,21 @@
 				C73B869D1C82768800438972 /* Info.plist */,
 			);
 			path = "shopify-iosUITests";
+			sourceTree = "<group>";
+		};
+		C7A9051B1C835DDB00049AB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C73B867D1C82768800438972 /* ProductsViewController.swift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7A9051C1C835DED00049AB3 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +274,6 @@
 			files = (
 				C73B86861C82768800438972 /* LaunchScreen.storyboard in Resources */,
 				C73B86831C82768800438972 /* Assets.xcassets in Resources */,
-				C73B86811C82768800438972 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,8 +346,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C73B867E1C82768800438972 /* ViewController.swift in Sources */,
+				C73B867E1C82768800438972 /* ProductsViewController.swift in Sources */,
 				C73B867C1C82768800438972 /* AppDelegate.swift in Sources */,
+				C7A9051E1C83674B00049AB3 /* Shopify.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,14 +384,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C73B867F1C82768800438972 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C73B86801C82768800438972 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C73B86841C82768800438972 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
