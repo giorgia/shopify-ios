@@ -36,28 +36,19 @@ class ProductCell: UICollectionViewCell {
         setupConstraints()
     }
     
+    func constraintView(view: UIView, below belowView: View) {
+        view.snp_makeConstraints { (make) -> Void in
+            make.top.equalTo(belowView.snp_top)
+            make.left.equalTo(snp_left)
+            make.right.equalTo(snp_right)
+        }
+    }
+    
     func setupConstraints() {
-        imageView.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(snp_top)
-            make.left.equalTo(snp_left)
-            make.right.equalTo(snp_right)
-        }
-        titleLabel.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(imageView).offset(5)
-            make.left.equalTo(snp_left)
-            make.right.equalTo(snp_right)
-        }
-        originalPriceLabel.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(titleLabel).offset(5)
-            make.left.equalTo(snp_left)
-            make.right.equalTo(snp_right)
-        }
-        salePriceLabel.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(originalPriceLabel).offset(5)
-            make.left.equalTo(snp_left)
-            make.right.equalTo(snp_right)
-            make.bottom.equalTo(snp_bottom)
-        }
+        constraintView(imageView, below: self)
+        constraintView(titleLabel, below: imageView)
+        constraintView(originalPriceLabel, below: titleLabel)
+        constraintView(salePriceLabel, below: originalPriceLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
